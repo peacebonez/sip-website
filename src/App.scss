@@ -1,0 +1,242 @@
+//Global styles
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Sass declarations
+
+%centered-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+$test-border: solid 1px #fff;
+
+$sipBlue: #52c2d0;
+
+.App {
+  @extend %centered-div;
+  overflow-x: hidden;
+}
+
+//Nav
+
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  width: 100vw;
+  background: transparent;
+  // border: $test-border;
+}
+
+#sip-logo {
+  margin: 1rem;
+  width: 50%;
+  opacity: 0.5;
+}
+
+//Background
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+//Landing
+
+.landing-container {
+  width: 100vw;
+  border: $test-border;
+}
+
+#locations {
+  width: 100vw;
+  @extend %centered-div;
+}
+
+.location-box {
+  @extend %centered-div;
+  width: 75vw;
+  margin: 2vh 0;
+  // border: $test-border;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    margin-top: 15px;
+    cursor: pointer;
+    color: #fff;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  hr {
+    width: 50%;
+    height: 1px;
+    background-color: #fff;
+    color: #fff;
+    margin: 0;
+  }
+  p {
+    font-size: 1.25em;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
+    margin: 7px;
+    font-weight: bold;
+    color: #fff;
+  }
+  button {
+    margin: 3vw;
+    transition: transform 0.4s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+#gallery {
+  min-height: 75vh;
+  // background: #742114;
+  // background-image: linear-gradient(to bottom, #742114, #ad3f2e, transparent);
+  background-image: linear-gradient(to bottom, #fff, transparent);
+  width: 100vw;
+
+  div {
+    border: $test-border;
+    @extend %centered-div;
+  }
+
+  img {
+    width: 80%;
+    margin: 2vh;
+    // border: $test-border;
+    // box-shadow: 5px 5px 1px black;
+  }
+}
+
+//Menu
+
+#menu {
+  text-align: center;
+  width: 100vw;
+  background-image: linear-gradient(to bottom, transparent, #000);
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    margin-top: 15px;
+  }
+}
+
+.menu-wrapper {
+  width: 100vw;
+
+  img {
+    box-shadow: 10px 10px 1px black;
+  }
+}
+
+#coffee-menu {
+  img {
+    width: 80%;
+  }
+}
+#food-menu {
+  width: 80%;
+}
+
+#hamburger {
+  position: relative;
+  margin-right: 2rem;
+}
+
+//Overlay menu
+
+// #overlay {
+//   height: 100vh;
+//   width: 100vw;
+//   overflow: hidden;
+//   background: black;
+//   opacity: 0.6;
+//   z-index: 1;
+//   position: fixed;
+//   top: 0;
+//   @extend %centered-div;
+// }
+
+.overlay-shown {
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .interactive .line {
+  background: #52c2d0;
+}
+
+.checkbox:checked ~ .interactive .line-1 {
+  transform: rotate(45deg) translate(10%, 200%);
+}
+
+.checkbox:checked ~ .interactive .line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .interactive .line-3 {
+  transform: rotate(-45deg) translateX(20%) translateY(-280%);
+}
+
+.interactive {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.interactive-two {
+  position: fixed;
+  margin: 1rem;
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.line {
+  margin-bottom: 0.5rem;
+  width: 2.5rem;
+  height: 0.3rem;
+  background: #fff;
+  transition: all 0.4s;
+}
+
+.interactive:hover .line {
+  background: #fff;
+  cursor: pointer;
+}
+
+.interactive-two:hover .line {
+  background: #fff;
+  cursor: pointer;
+}

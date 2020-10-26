@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.scss";
+import Nav from "./components/Nav";
+import Landing from "./components/Landing";
+import Background from "./components/Background";
+import Gallery from "./components/Gallery";
+import Menu from "./components/Menu";
+import StickyFooter from "./components/StickyFooter";
+import Overlay from "./components/Overlay";
 
 function App() {
+  const [isOverlayShown, setisOverlayShown] = useState(false);
+  console.log("isOverlayShown:", isOverlayShown);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav
+        isOverlayShown={isOverlayShown}
+        setisOverlayShown={setisOverlayShown}
+      />
+      <Background />
+      <Landing />
+      <Gallery />
+      <Menu />
+      <StickyFooter />
+      <Overlay isOverlayShown={isOverlayShown} />
     </div>
   );
 }
