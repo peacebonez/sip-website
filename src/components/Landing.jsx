@@ -11,6 +11,21 @@ const Landing = ({ navBarHeight }) => {
     const navBarHeight = document.querySelector(".nav").clientHeight;
     setheight(navBarHeight);
   }, [navBarHeight]);
+
+  //fade in locations
+  useEffect(() => {
+    const locationBoxes = [...document.querySelectorAll(".location-box")];
+    let timer;
+    let ms = 250;
+    locationBoxes.forEach((box) => {
+      timer = setTimeout(() => {
+        box.style.opacity = 1;
+      }, ms);
+      ms += 250;
+    });
+    return () => clearInterval(timer);
+  });
+
   return (
     <section
       className="landing-container"

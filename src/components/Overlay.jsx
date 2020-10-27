@@ -21,16 +21,16 @@ const Overlay = ({ isOverlayShown, setisOverlayShown }) => {
     <div id="overlay" style={styles}>
       <ul>
         <a href="#locations" onClick={() => setisOverlayShown(false)}>
-          <li>Locations</li>
+          <li className="middle-underline">Locations</li>
         </a>
         <a href="#gallery" onClick={() => setisOverlayShown(false)}>
-          <li>Gallery</li>
+          <li className="middle-underline">Gallery</li>
         </a>
         <a href="#menu" onClick={() => setisOverlayShown(false)}>
-          <li>Menu</li>
+          <li className="middle-underline">Menu</li>
         </a>
         <a href="#contact" onClick={() => setisOverlayShown(false)}>
-          <li>Contact</li>
+          <li className="middle-underline">Contact</li>
         </a>
       </ul>
     </div>

@@ -17,7 +17,6 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
-    // flexDirection: "column",
   },
   main: {
     marginTop: theme.spacing(6),
@@ -26,9 +25,10 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     padding: theme.spacing(2, 2),
     marginTop: "auto",
-    backgroundColor: "#000",
     width: "100vw",
+    // backgroundColor: "#fff",
     color: "#fff",
+    textAlign: "center",
   },
 }));
 

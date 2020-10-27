@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import Background from "./components/Background";
 import Gallery from "./components/Gallery";
 import Menu from "./components/Menu";
+import Contact from "./components/Contact";
 import StickyFooter from "./components/StickyFooter";
 import Overlay from "./components/Overlay";
 
@@ -21,6 +22,7 @@ function App() {
       <Landing />
       <Gallery />
       <Menu />
+      <Contact />
       <StickyFooter />
       <Overlay
         isOverlayShown={isOverlayShown}
