@@ -300,17 +300,17 @@ $sipBlue: #52c2d0;
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1280px) {
   .location-box {
     h1 {
-      font-size: 3.5em;
+      font-size: 2em;
     }
     p {
       margin-top: 1vh;
-      font-size: 2.5em;
+      font-size: 1.5em;
     }
     button {
-      font-size: 2em;
+      font-size: 1em;
     }
   }
   #gallery {
@@ -321,11 +321,11 @@ $sipBlue: #52c2d0;
 
   #coffee-menu {
     img {
-      width: 60%;
+      width: 40%;
     }
   }
   #food-menu {
-    width: 60%;
+    width: 40%;
   }
 }
 
@@ -338,7 +338,7 @@ $sipBlue: #52c2d0;
 }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1281px) {
   .location-box {
     h1 {
       font-size: 5em;

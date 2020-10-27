@@ -11,11 +11,11 @@ import cakePops from "../assets/cake-pops.jpg";
 import GalleryImage from "../components/GalleryImage";
 const images = [
   { image: macaroon, alt: "Tasty blue macaroon" },
-  { image: coldBrew, alt: "Cold brew with pride logo" },
   { image: espresso, alt: "Espresso being poured" },
-  { image: dessertDrink, alt: "Creamy XL cold brew" },
+  { image: coldBrew, alt: "Cold brew with pride logo" },
   { image: bagel, alt: "Bagel sandwich paired with a cold brew" },
   { image: orangeDrank, alt: "Orange drink" },
+  { image: dessertDrink, alt: "Creamy XL cold brew" },
   // { image: cakePops, alt: "Colorful cake pops with verdant green back drop" },
 ];
 
@@ -23,7 +23,8 @@ const Gallery = () => {
   const gridStyles = {
     display: "grid",
     gridGap: "3vw",
-    gridTemplateColumns: "33vw 33vw",
+    gridTemplateColumns: "20vw 20vw 20vw",
+    // gridTemplateColumns: "33vw 33vw",
     justifyContent: "center",
     justifyItems: "center",
   };
