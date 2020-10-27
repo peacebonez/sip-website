@@ -22,7 +22,10 @@ function App() {
       <Gallery />
       <Menu />
       <StickyFooter />
-      <Overlay isOverlayShown={isOverlayShown} />
+      <Overlay
+        isOverlayShown={isOverlayShown}
+        setisOverlayShown={setisOverlayShown}
+      />
     </div>
   );
 }

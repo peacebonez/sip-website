@@ -45,6 +45,9 @@ const Landing = ({ navBarHeight }) => {
           link="https://www.facebook.com/Sip-Coffee-House-3-113965280007448/"
         />
       </section>
+      <blockquote>
+        "Awesome meet-up location for great food and lattes."
+      </blockquote>
     </section>
   );
 };

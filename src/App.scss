@@ -65,6 +65,14 @@ $sipBlue: #52c2d0;
 .landing-container {
   width: 100vw;
   border: $test-border;
+  blockquote {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Caveat", cursive;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+  }
 }
 
 #locations {
@@ -76,7 +84,6 @@ $sipBlue: #52c2d0;
   @extend %centered-div;
   width: 75vw;
   margin: 2vh 0;
-  // border: $test-border;
 
   h2 {
     text-transform: uppercase;
@@ -86,6 +93,7 @@ $sipBlue: #52c2d0;
     color: #fff;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
+    font-weight: 200;
   }
   hr {
     width: 50%;
@@ -98,9 +106,8 @@ $sipBlue: #52c2d0;
     font-size: 1.25em;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
-    // font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
     margin: 7px;
-    font-weight: bold;
     color: #fff;
   }
   button {
@@ -143,6 +150,7 @@ $sipBlue: #52c2d0;
     text-transform: uppercase;
     font-size: 1.75em;
     margin-top: 15px;
+    font-weight: 200;
   }
 }
 
@@ -162,27 +170,33 @@ $sipBlue: #52c2d0;
 #food-menu {
   width: 80%;
 }
+//Overlay menu
+
+#overlay {
+  ul {
+    color: white;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    li {
+      font-size: 3rem;
+      margin: 3vh;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        color: $sipBlue;
+      }
+    }
+  }
+}
+
+.overlay-shown {
+}
 
 #hamburger {
   position: relative;
   margin-right: 2rem;
-}
-
-//Overlay menu
-
-// #overlay {
-//   height: 100vh;
-//   width: 100vw;
-//   overflow: hidden;
-//   background: black;
-//   opacity: 0.6;
-//   z-index: 1;
-//   position: fixed;
-//   top: 0;
-//   @extend %centered-div;
-// }
-
-.overlay-shown {
 }
 
 .checkbox {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import menuCoffee from "../assets/menu-coffee.jpg";
 import menuFood from "../assets/menu-food.jpg";
 
-const Menu = (props) => {
+const Menu = () => {
   return (
     <section id="menu">
       <h1>Our Menu</h1>
