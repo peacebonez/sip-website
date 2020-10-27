@@ -84,15 +84,17 @@ $sipBlue: #52c2d0;
   margin: 2vh 0;
   opacity: 0;
   transition: opacity 0.6s;
-  h2 {
+  h1 {
     text-transform: uppercase;
     font-size: 1.75em;
-    margin-top: 15px;
-    cursor: pointer;
     color: #fff;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
     font-weight: 200;
+    cursor: pointer;
+    &:hover {
+      color: #ddd;
+    }
   }
   hr {
     width: 50%;
@@ -120,16 +122,9 @@ $sipBlue: #52c2d0;
 
 #gallery {
   min-height: 75vh;
-  // background: #742114;
-  // background-image: linear-gradient(to bottom, #742114, #ad3f2e, transparent);
   background-image: linear-gradient(to bottom, #fff, transparent);
   width: 100vw;
   padding: 6vh 0;
-
-  div {
-    // border: $test-border;
-    // @extend %centered-div;
-  }
 
   img {
     width: 80%;
@@ -142,11 +137,16 @@ $sipBlue: #52c2d0;
 #menu {
   text-align: center;
   width: 100vw;
-  background-image: linear-gradient(to bottom, transparent, $sipBlue);
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    $sipBlue,
+    transparent
+  );
   h1 {
     color: white;
     text-transform: uppercase;
-    font-size: 1.75em;
+    font-size: 2.5em;
     font-weight: 200;
     margin-top: 15px;
   }
@@ -174,12 +174,11 @@ $sipBlue: #52c2d0;
 
 #contact {
   width: 100vw;
-  // background: #000;
   @extend %centered-div;
-  padding: 5vw;
+  border-top: solid 1px white;
   h3 {
     color: #fff;
-    font-size: 1.75em;
+    font-size: 36px;
     font-weight: 200;
   }
   p {
@@ -302,30 +301,87 @@ $sipBlue: #52c2d0;
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .location-box {
+    h1 {
+      font-size: 3.5em;
+    }
+    p {
+      margin-top: 1vh;
+      font-size: 2.5em;
+    }
+    button {
+      font-size: 2em;
+    }
+  }
+  #gallery {
+    img {
+      width: 100%;
+    }
+  }
+
+  #coffee-menu {
+    img {
+      width: 60%;
+    }
+  }
+  #food-menu {
+    width: 60%;
+  }
 }
 
 /* iPads (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
 }
 
 /* iPads (portrait) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
 }
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
-  #gallery {
-    img {
-      width: 80%;
+  .location-box {
+    h1 {
+      font-size: 5em;
     }
+    p {
+      margin-top: 1vh;
+      font-size: 2.5em;
+    }
+    button {
+      font-size: 2em;
+    }
+  }
+
+  #menu {
+    h1 {
+      font-size: 5em;
+    }
+  }
+
+  #coffee-menu {
+    img {
+      width: 60%;
+    }
+  }
+  #food-menu {
+    width: 60%;
   }
 }
 
 /* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
+@media only screen and (min-width: 1600px) {
+  #sip-logo {
+    width: 100%;
+  }
+  #coffee-menu {
+    img {
+      width: 800px;
+    }
+  }
+  #food-menu {
+    width: 800px;
+    margin-right: 5vw;
+  }
 }
 
 /* iPhone 4 ----------- */

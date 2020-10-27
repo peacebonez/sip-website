@@ -11,7 +11,17 @@ import Overlay from "./components/Overlay";
 
 function App() {
   const [isOverlayShown, setisOverlayShown] = useState(false);
-  console.log("isOverlayShown:", isOverlayShown);
+  const [isBigScreen, setisBigScreen] = useState(window.innerHeight > 1600);
+
+  useEffect(() => {
+    let viewWidth = window.innerWidth;
+    window.addEventListener("resize", () => {
+      viewWidth = window.innerWidth;
+      if (viewWidth > 1600) setisBigScreen(true);
+      else setisBigScreen(false);
+    });
+  });
+
   return (
     <div className="App">
       <Nav
@@ -21,7 +31,7 @@ function App() {
       <Background />
       <Landing />
       <Gallery />
-      <Menu />
+      <Menu isBigScreen={isBigScreen} setisBigScreen={setisBigScreen} />
       <Contact />
       <StickyFooter />
       <Overlay

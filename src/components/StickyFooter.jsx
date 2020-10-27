@@ -6,7 +6,7 @@ import Container from "@material-ui/core/Container";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="white">
+    <Typography variant="body2" color="white" style={{ fontSize: "2em" }}>
       {"Copyright © "}
       {new Date().getFullYear()}
       {"."}
@@ -40,7 +40,7 @@ export default function StickyFooter() {
       <CssBaseline />
       <footer className={classes.footer}>
         <Container maxWidth="sm">
-          <p>Built by kmpariso</p>
+          <p style={{ fontSize: "20px" }}>Built by kmpariso</p>
           <Copyright />
         </Container>
       </footer>

@@ -13,7 +13,7 @@ const LocationBox = ({
   return (
     <div className="location-box">
       <a href={link}>
-        <h2>Sip {location}</h2>
+        <h1 className="location-header">Sip {location}</h1>
       </a>
       <hr />
       <p>{street}</p>

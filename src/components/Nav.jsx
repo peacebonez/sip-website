@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import sipIcon from "../assets/sip-icon.jpeg";
+import sipIcon from "../assets/sip-icon.png";
 
 const Nav = ({ isOverlayShown, setisOverlayShown }) => {
   return (
