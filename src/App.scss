@@ -122,13 +122,17 @@ $sipBlue: #52c2d0;
 
 #gallery {
   min-height: 75vh;
-  background-image: linear-gradient(to bottom, #fff, transparent);
+  // background-image: linear-gradient(to bottom, #fff, transparent);
   width: 100vw;
   padding: 6vh 0;
 
   img {
     width: 80%;
     margin: 2vh;
+    transition: box-shadow 0.4s;
+    &:hover {
+      box-shadow: 8px 8px 5px #222;
+    }
   }
 }
 
@@ -137,12 +141,12 @@ $sipBlue: #52c2d0;
 #menu {
   text-align: center;
   width: 100vw;
-  background-image: linear-gradient(
-    to bottom,
-    transparent,
-    $sipBlue,
-    transparent
-  );
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   transparent,
+  //   $sipBlue,
+  //   transparent
+  // );
   h1 {
     color: white;
     text-transform: uppercase;

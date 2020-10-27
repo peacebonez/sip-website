@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-const GalleryImage = ({ image, alt, isFlex, setisFlex }) => {
+const GalleryImage = ({ image, alt, isFlex }) => {
   const flexCenter = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
-  };
-
-  const gridStyles = {
-    margin: "0",
-    padding: "0",
-    alignContent: "center",
-    justifySelf: "center",
-    alignSelf: "center",
     alignItems: "center",
   };
 
@@ -29,6 +20,10 @@ const GalleryImage = ({ image, alt, isFlex, setisFlex }) => {
   );
 };
 
-GalleryImage.propTypes = {};
+GalleryImage.propTypes = {
+  image: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  isFlex: PropTypes.bool.isRequired,
+};
 
 export default GalleryImage;

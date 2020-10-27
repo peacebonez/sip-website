@@ -10,16 +10,19 @@ import StickyFooter from "./components/StickyFooter";
 import Overlay from "./components/Overlay";
 
 function App() {
+  let viewWidth = window.innerWidth;
   const [isOverlayShown, setisOverlayShown] = useState(false);
-  const [isBigScreen, setisBigScreen] = useState(window.innerHeight > 1600);
+  const [isBigScreen, setisBigScreen] = useState(viewWidth > 1600);
 
   useEffect(() => {
-    let viewWidth = window.innerWidth;
-    window.addEventListener("resize", () => {
-      viewWidth = window.innerWidth;
-      if (viewWidth > 1600) setisBigScreen(true);
-      else setisBigScreen(false);
-    });
+    window.addEventListener(
+      "resize",
+      () => {
+        if (window.innerWidth > 1600) setisBigScreen(true);
+        else setisBigScreen(false);
+      },
+      [window.innerWidth]
+    );
   });
 
   return (
@@ -31,7 +34,7 @@ function App() {
       <Background />
       <Landing />
       <Gallery />
-      <Menu isBigScreen={isBigScreen} setisBigScreen={setisBigScreen} />
+      <Menu isBigScreen={isBigScreen} />
       <Contact />
       <StickyFooter />
       <Overlay

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import espresso from "../assets/espresso.jpg";
 import macaroon from "../assets/macaroon.jpg";
 import coldBrew from "../assets/cold-brew.jpg";
 import bagel from "../assets/bagel.jpg";
 import dessertDrink from "../assets/dessert-drink.jpg";
 import orangeDrank from "../assets/orange-drank.jpg";
-import cakePops from "../assets/cake-pops.jpg";
 
 import GalleryImage from "../components/GalleryImage";
 const images = [
@@ -16,7 +14,6 @@ const images = [
   { image: bagel, alt: "Bagel sandwich paired with a cold brew" },
   { image: orangeDrank, alt: "Orange drink" },
   { image: dessertDrink, alt: "Creamy XL cold brew" },
-  // { image: cakePops, alt: "Colorful cake pops with verdant green back drop" },
 ];
 
 const Gallery = () => {
@@ -28,14 +25,12 @@ const Gallery = () => {
     justifyContent: "center",
     justifyItems: "center",
   };
-
-  const [isFlex, setisFlex] = useState(window.innerWidth < 768);
+  let viewWidth = window.innerWidth;
+  const [isFlex, setisFlex] = useState(viewWidth < 768);
 
   useEffect(() => {
-    let viewWidth = window.innerWidth;
     window.addEventListener("resize", () => {
-      viewWidth = window.innerWidth;
-      if (viewWidth < 768) setisFlex(true);
+      if (window.innerWidth < 768) setisFlex(true);
       else setisFlex(false);
     });
   });
@@ -49,14 +44,11 @@ const Gallery = () => {
             image={obj.image}
             alt={obj.alt}
             isFlex={isFlex}
-            setisFlex={setisFlex}
           />
         );
       })}
     </section>
   );
 };
-
-Gallery.propTypes = {};
 
 export default Gallery;

@@ -1,11 +1,7 @@
 import React from "react";
-import espresso from "../assets/espresso.jpg";
-
 import blueCoffee from "../assets/blue-coffee.jpg";
 
-import PropTypes from "prop-types";
-
-const Background = (props) => {
+const Background = () => {
   return (
     <div
       id="background"
@@ -16,7 +12,5 @@ const Background = (props) => {
     ></div>
   );
 };
-
-Background.propTypes = {};
 
 export default Background;

@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
 
 import LocationBox from "./LocationBox";
 
-const Landing = ({ navBarHeight }) => {
+const Landing = () => {
   const [height, setheight] = useState("");
 
   //programmatically set margin-top on locations section
   useEffect(() => {
     const navBarHeight = document.querySelector(".nav").clientHeight;
     setheight(navBarHeight);
-  }, [navBarHeight]);
+  }, []);
 
   //fade in locations
   useEffect(() => {
@@ -66,7 +65,5 @@ const Landing = ({ navBarHeight }) => {
     </section>
   );
 };
-
-Landing.propTypes = {};
 
 export default Landing;

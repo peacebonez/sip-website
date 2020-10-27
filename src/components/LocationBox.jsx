@@ -40,6 +40,8 @@ LocationBox.propTypes = {
   street: PropTypes.string.isRequired,
   cityStateZip: PropTypes.string.isRequired,
   telephone: PropTypes.string.isRequired,
+  link: PropTypes.string,
+  orderLink: PropTypes.string,
 };
 
 export default LocationBox;
