@@ -25,6 +25,7 @@ const Gallery = () => {
     justifyContent: "center",
     justifyItems: "center",
   };
+
   let viewWidth = window.innerWidth;
   const [isFlex, setisFlex] = useState(viewWidth < 768);
 
@@ -32,6 +33,32 @@ const Gallery = () => {
     window.addEventListener("resize", () => {
       if (window.innerWidth < 768) setisFlex(true);
       else setisFlex(false);
+    });
+  });
+
+  useEffect(() => {
+    const icons = document.querySelectorAll("#gallery img");
+    const fadeIn = (delay) => {
+      icons.forEach((img) => {
+        const imgTop = img.getBoundingClientRect().top;
+        const imgBottom = img.getBoundingClientRect().bottom;
+
+        if (imgTop < window.innerHeight && imgBottom > 0) {
+          img.style.animation = `fadeIn 1s ${delay}s both`;
+          delay += 0.25;
+        } else {
+          img.style.opacity = 0;
+          img.style.animation = "";
+        }
+      });
+    };
+
+    fadeIn(0.1);
+    document.addEventListener("scroll", () => {
+      fadeIn(0.1);
+    });
+    window.addEventListener("resize", () => {
+      fadeIn(0.1);
     });
   });
 

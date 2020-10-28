@@ -6,7 +6,7 @@ import Container from "@material-ui/core/Container";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="white" style={{ fontSize: "2em" }}>
+    <Typography variant="body2" color="#fff" style={{ fontSize: "2em" }}>
       {"Copyright © "}
       {new Date().getFullYear()}
       {"."}
@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2, 2),
     marginTop: "auto",
     width: "100vw",
-    // backgroundColor: "#fff",
     color: "#fff",
     textAlign: "center",
   },
